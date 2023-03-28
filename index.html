@@ -8,7 +8,7 @@
 	<title>CSO – Centro de Serviços Odontológico – Nosso intuito é Transformar toda espera em um Sorriso.</title>
 	<meta name="robots" content="max-image-preview:large">
 
-
+	<link rel="stylesheet" type="text/css" href="wp-includes/css/custom.css" />
 	<link rel="stylesheet" id="wp-block-library-css"
 		href="https://flyingdutchman-dev.github.io/demoinstitucional/wp-includes/css/dist/block-library/style.min.css"
 		media="all">
@@ -1017,80 +1017,37 @@
 										</li>
 									</ul>
 								</nav>
+								<!-- Edited -->
 								<div class="elementor-menu-toggle" role="button" tabindex="0" aria-label="Menu Toggle"
 									aria-expanded="false">
-									<i aria-hidden="true" role="presentation"
-										class="elementor-menu-toggle__icon--open fas fa-bars"></i>
-									<i aria-hidden="true" role="presentation"
-										class="elementor-menu-toggle__icon--close eicon-close"></i>
+									<i id="hamburger" aria-hidden="true" role="presentation" class="fas fa-bars"></i>
 									<span class="elementor-screen-only">Menu</span>
 								</div>
-								<nav class="elementor-nav-menu--dropdown elementor-nav-menu__container"
-									aria-hidden="true">
-									<ul id="menu-2-3c06cc1" class="elementor-nav-menu">
+								<nav id="menu" class="menu" aria-hidden="true">
+									<ul class="elementor-nav-menu">
 										<li
 											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-30 current_page_item menu-item-38">
 											<a href="https://flyingdutchman-dev.github.io/demoinstitucional/"
 												aria-current="page" class="elementor-item elementor-item-active"
-												tabindex="-1">Home</a>
+												tabindex="-1" style="color: #fff;">Home</a>
 										</li>
 										<li
 											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-40">
 											<a href="https://flyingdutchman-dev.github.io/demoinstitucional/quem-somos/"
-												class="elementor-item" tabindex="-1">Quem Somos</a>
+												class="elementor-item" tabindex="-1" style="color: #fff;">Quem Somos</a>
 										</li>
 										<li
 											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-41">
 											<a href="https://flyingdutchman-dev.github.io/demoinstitucional/tratamentos/"
-												class="elementor-item" tabindex="-1">Tratamentos</a>
+												class="elementor-item" tabindex="-1" style="color: #fff;">Tratamentos</a>
 										</li>
 										<li
 											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-39">
 											<a href="https://flyingdutchman-dev.github.io/demoinstitucional/contato/"
-												class="elementor-item" tabindex="-1">Contato</a>
+												class="elementor-item" tabindex="-1" style="color: #fff;">Contato</a>
 										</li>
 									</ul>
 								</nav>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-609b4a5"
-					data-id="609b4a5" data-element_type="column">
-					<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-279fd54 e-grid-align-right elementor-shape-rounded elementor-grid-0 elementor-widget elementor-widget-social-icons"
-							data-id="279fd54" data-element_type="widget" data-widget_type="social-icons.default">
-							<div class="elementor-widget-container">
-								<div class="elementor-social-icons-wrapper elementor-grid">
-									<span class="elementor-grid-item">
-										<a class="elementor-icon elementor-social-icon elementor-social-icon-facebook elementor-repeater-item-320e991"
-											target="_blank">
-											<span class="elementor-screen-only">Facebook</span>
-											<i class="fa fa-facebook"></i>
-										</a>
-									</span>
-									<span class="elementor-grid-item">
-										<a class="elementor-icon elementor-social-icon elementor-social-icon-twitter elementor-repeater-item-1491259"
-											target="_blank">
-											<span class="elementor-screen-only">Twitter</span>
-											<i class="fa fa-twitter"></i>
-										</a>
-									</span>
-									<span class="elementor-grid-item">
-										<a class="elementor-icon elementor-social-icon elementor-social-icon-github elementor-repeater-item-8206083"
-											target="_blank">
-											<span class="elementor-screen-only">Github</span>
-											<i class="fa fa-github"></i>
-										</a>
-									</span>
-									<span class="elementor-grid-item">
-										<a class="elementor-icon elementor-social-icon elementor-social-icon-bitbucket elementor-repeater-item-dccfaf9"
-											target="_blank">
-											<span class="elementor-screen-only">Bitbucket</span>
-											<i class="fa fa-bitbucket"></i>
-										</a>
-									</span>
-								</div>
 							</div>
 						</div>
 					</div>
@@ -2274,6 +2231,20 @@
 
 		</div>
 	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+	<script>
+		$('#hamburger').on('click', function () {
+			$('#menu').slideToggle('slow');
+		});
+
+		$('.menu-link').each(function () {
+			$(this).on('click', function () {
+				$('#menu').slideToggle('slow');
+			});
+		});
+	</script>
 
 	<script type="text/javascript">
 		function __load_wpfront_notification_bar() {

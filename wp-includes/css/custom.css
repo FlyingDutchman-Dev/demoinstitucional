@@ -1,0 +1,16 @@
+#button {
+    display: block
+}
+
+.menu {
+    padding: 10px;
+    padding-right: 200%;
+    border: none;
+    display: none
+}
+
+@media screen and (max-width: 576px) {
+    .menu {
+        display: none;
+    }
+}
